@@ -1,0 +1,4 @@
+import { h } from 'vue'
+import { createSvgIcon } from '../../../../internal/svg'
+export const IconFileSolid = createSvgIcon("IconFileSolid", {"width": "24", "height": "24", "viewBox": "0 0 24 24", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"}, () => [h("path", {"d": "M11.25 2v5.25A3.75 3.75 0 0015 11h5v7.25A3.75 3.75 0 0116.25 22h-8.5A3.75 3.75 0 014 18.25V5.75A3.75 3.75 0 017.75 2h3.5z", "fill": "currentColor"}, []), h("path", {"d": "M12.75 2.169V7.25A2.25 2.25 0 0015 9.5h4.883a3.75 3.75 0 00-.962-1.702l-4.612-4.68a3.75 3.75 0 00-1.559-.95z", "fill": "currentColor"}, [])])
+export default IconFileSolid

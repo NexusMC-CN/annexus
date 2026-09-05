@@ -1,0 +1,24 @@
+.charcoal-text-ellipsis {
+  /* Runtime variables overridden by the React component. */
+  --charcoal-text-ellipsis-line-limit: 1;
+  --charcoal-text-ellipsis-line-height: inherit;
+
+  overflow: hidden;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--charcoal-text-ellipsis-line-limit);
+
+  &[data-has-line-height='true'] {
+    line-height: var(--charcoal-text-ellipsis-line-height);
+  }
+
+  &[data-has-line-height='false'] {
+    line-height: inherit;
+  }
+
+  &[data-line-limit='1'][data-use-nowrap='true'] {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

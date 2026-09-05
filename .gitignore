@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.astro/
+.cache/
+coverage/
+test-results/
+playwright-report/
+tests/upstream/
+*.tgz
+*.tsbuildinfo

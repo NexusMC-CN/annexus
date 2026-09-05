@@ -1,0 +1,4 @@
+import { h } from 'vue'
+import { createSvgIcon } from '../../../internal/svg'
+export const IconBookmarkOffInline = createSvgIcon("IconBookmarkOffInline", {"width": "10", "height": "14", "viewBox": "0 0 10 14", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"}, () => [h("path", {"fill-rule": "evenodd", "clip-rule": "evenodd", "d": "M5 11l5 2.5V3a2 2 0 00-2-2H2a2 2 0 00-2 2v10.5L5 11zm-4 .882l4-2 4 2V3a1 1 0 00-1-1H2a1 1 0 00-1 1v8.882z", "fill": "currentColor"}, []), h("path", {"fill-rule": "evenodd", "clip-rule": "evenodd", "d": "M1 11.882l4-2 4 2V3a1 1 0 00-1-1H2a1 1 0 00-1 1v8.882z", "fill": "#fff"}, []), h("path", {"d": "M9 11.882V3a1 1 0 00-1-1H2a1 1 0 00-1 1v8.882l4-2 4 2z", "fill": "#fff"}, [])])
+export default IconBookmarkOffInline

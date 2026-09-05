@@ -1,0 +1,106 @@
+.charcoal-text-area-root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 4px;
+
+  &[aria-disabled='true'] {
+    opacity: 0.32;
+  }
+}
+
+.charcoal-text-area-container {
+  /* Runtime variable overridden by the React component. */
+  --charcoal-text-area-rows: 4;
+
+  position: relative;
+  overflow: hidden;
+
+  color: var(--charcoal-color-text-secondary-default);
+  background-color: var(--charcoal-color-container-secondary-default-a);
+  border-radius: 4px;
+  transition:
+    0.2s background-color,
+    0.2s box-shadow;
+  height: calc(22px * var(--charcoal-text-area-rows) + 18px);
+
+  &[aria-invalid='true'] {
+    box-shadow: 0 0 0 4px rgba(255, 43, 0, 0.32);
+  }
+
+  &:focus-within {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 150, 250, 0.32);
+  }
+
+  &:has([data-no-bottom-padding='true']) {
+    height: calc(22px * (var(--charcoal-text-area-rows) + 1) + 18px);
+  }
+
+  &:not([aria-disabled='true']):hover {
+    background-color: var(--charcoal-color-container-secondary-hover-a);
+  }
+
+  &[aria-invalid='true']:focus-within {
+    box-shadow: 0 0 0 4px rgba(255, 43, 0, 0.32);
+  }
+}
+
+.charcoal-text-area-textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  font-family: inherit;
+  color: inherit;
+  box-sizing: border-box;
+
+  /* Prevent zooming for iOS Safari */
+  --charcoal-textarea-safari-prevent-zoom-scale: 0.875;
+  --charcoal-textarea-line-height: calc(
+    22px / var(--charcoal-textarea-safari-prevent-zoom-scale)
+  );
+  --charcoal-textarea-padding-y: calc(
+    8px / var(--charcoal-textarea-safari-prevent-zoom-scale)
+  );
+  --charcoal-textarea-padding-x: calc(
+    9px / var(--charcoal-textarea-safari-prevent-zoom-scale)
+  );
+
+  transform-origin: top left;
+  transform: scale(var(--charcoal-textarea-safari-prevent-zoom-scale));
+  width: calc(100% / var(--charcoal-textarea-safari-prevent-zoom-scale));
+  font-size: calc(14px / var(--charcoal-textarea-safari-prevent-zoom-scale));
+  line-height: var(--charcoal-textarea-line-height);
+  padding: var(--charcoal-textarea-padding-y) var(--charcoal-textarea-padding-x);
+  height: calc(
+    var(--charcoal-textarea-line-height) * var(--charcoal-text-area-rows) +
+      var(--charcoal-textarea-padding-y) * 2
+  );
+
+  /* Display box-shadow for iOS Safari */
+  appearance: none;
+
+  background: none;
+
+  &[data-no-bottom-padding='true'] {
+    padding: var(--charcoal-textarea-padding-y)
+      var(--charcoal-textarea-padding-x) 0;
+    height: calc(
+      var(--charcoal-textarea-line-height) * var(--charcoal-text-area-rows) +
+        var(--charcoal-textarea-padding-y)
+    );
+  }
+
+  &::placeholder {
+    color: var(--charcoal-color-text-placeholder-default);
+  }
+}
+
+.charcoal-text-area-counter {
+  position: absolute;
+  bottom: 9px;
+  right: 8px;
+
+  line-height: 22px;
+  font-size: 14px;
+  color: var(--charcoal-color-text-tertiary-default);
+}

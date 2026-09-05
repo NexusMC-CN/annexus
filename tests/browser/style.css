@@ -1,0 +1,12 @@
+body { margin: 0; font: 14px Arial, sans-serif; background: var(--charcoal-background1); color: var(--charcoal-text1); }
+* { box-sizing: border-box; }
+#app { padding: 24px; }
+.fixture { max-width: 880px; }
+.row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 0 0 24px; }
+.column { display: flex; flex-direction: column; gap: 20px; }
+.field { width: 320px; max-width: 100%; }
+.tile { width: 160px; height: 120px; display: grid; place-items: center; background: var(--charcoal-brand); color: white; border-radius: 8px; }
+.clip { width: 180px; }
+.menu { width: 260px; }
+.fixed { width: 560px; max-width: 100%; }
+output { display: block; margin: 16px 0; }

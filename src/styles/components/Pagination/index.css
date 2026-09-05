@@ -1,0 +1,123 @@
+.charcoal-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &[data-size='S'] .charcoal-pagination-button {
+    min-width: 32px;
+    min-height: 32px;
+  }
+
+  &[data-size='M'] .charcoal-pagination-button {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+
+/* stylelint-disable no-descending-specificity */
+.charcoal-pagination-button {
+  cursor: pointer;
+  appearance: none;
+  padding: 0;
+  border-style: none;
+  outline: none;
+  text-decoration: none;
+  font-family: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  margin: 0;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 22px;
+
+  /* HACK:
+   * Safari doesn't correctly repaint the elements when they're reordered in response to interaction.
+   * This forces it to repaint them. This doesn't work if put on the parents either, has to be here.
+   */
+  -webkit-transform: translateZ(0);
+
+  color: var(--charcoal-color-text-tertiary-default);
+  background-color: transparent;
+  border-radius: 20px;
+  transition:
+    0.2s background-color,
+    0.2s box-shadow;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  &[hidden] {
+    visibility: hidden;
+    display: block;
+  }
+
+  &:not(:disabled):not([aria-disabled]):hover,
+  &[aria-disabled='false']:hover {
+    color: var(--charcoal-color-text-tertiary-default);
+    background-color: var(--charcoal-color-container-secondary-default);
+  }
+
+  &:not(:disabled):not([aria-disabled]):active,
+  &[aria-disabled='false']:active {
+    color: var(--charcoal-color-text-tertiary-press);
+    background-color: var(--charcoal-color-container-tertiary-press);
+  }
+
+  &:not(:disabled):not([aria-disabled]):focus,
+  &[aria-disabled='false']:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 150, 250, 0.32);
+  }
+
+  &:not(:disabled):not([aria-disabled]):focus-visible,
+  &[aria-disabled='false']:focus-visible {
+    box-shadow: 0 0 0 4px rgba(0, 150, 250, 0.32);
+  }
+
+  &:not(:disabled):not([aria-disabled]):focus:not(:focus-visible),
+  &[aria-disabled='false']:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+
+  &[aria-current] {
+    cursor: default;
+    background-color: var(--charcoal-color-container-hud-default);
+    color: var(--charcoal-color-text-on-hud-default);
+
+    &:not(:disabled):not([aria-disabled]):hover,
+    &:not(:disabled):not([aria-disabled]):active {
+      background-color: var(--charcoal-color-container-hud-default);
+      color: var(--charcoal-color-text-on-hud-default);
+    }
+  }
+}
+/* stylelint-enable no-descending-specificity */
+
+.charcoal-pagination-nav-button[data-hidden] {
+  visibility: hidden;
+}
+
+.charcoal-pagination-spacer {
+  &,
+  &:hover,
+  &:active {
+    cursor: default;
+    color: var(--charcoal-color-text-tertiary-default);
+    background: none;
+  }
+
+  &.charcoal-icon-button:disabled {
+    opacity: 1;
+  }
+}

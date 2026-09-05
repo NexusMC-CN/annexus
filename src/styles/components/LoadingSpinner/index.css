@@ -1,0 +1,43 @@
+.charcoal-loading-spinner {
+  box-sizing: content-box;
+  margin: auto;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.84;
+  color: var(--charcoal-color-icon-tertiary-default);
+  background-color: var(--charcoal-color-background-default);
+
+  &[data-transparent='true'] {
+    background-color: transparent;
+  }
+}
+
+@keyframes charcoal-loading-spinner-icon-scale-out {
+  from {
+    transform: scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.charcoal-loading-spinner-icon {
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  background-color: currentColor;
+  animation: charcoal-loading-spinner-icon-scale-out 1s infinite both ease-out;
+
+  &[data-reset-animation] {
+    animation: none;
+  }
+
+  &[data-once='true'] {
+    animation-iteration-count: 1;
+  }
+}

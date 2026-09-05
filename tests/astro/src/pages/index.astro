@@ -1,0 +1,15 @@
+---
+import Controls from '../components/Controls.vue'
+import { Button } from '@nexusmc/annexus'
+import '@nexusmc/annexus/style.css'
+import '@nexusmc/annexus/theme.css'
+---
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Annexus Astro</title></head>
+  <body>
+    <Button variant="Primary">Server rendered</Button>
+    <Controls client:load label="First island" />
+    <Controls client:visible label="Second island" />
+  </body>
+</html>

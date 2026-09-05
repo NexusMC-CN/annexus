@@ -1,0 +1,4 @@
+import { h } from 'vue'
+import { createSvgIcon } from '../../../../internal/svg'
+export const IconTextAlignLeftSolid = createSvgIcon("IconTextAlignLeftSolid", {"width": "24", "height": "24", "viewBox": "0 0 24 24", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"}, () => [h("path", {"d": "M2.504 4.753c0-.69.56-1.25 1.25-1.25h16.492a1.25 1.25 0 110 2.5H3.754c-.69 0-1.25-.56-1.25-1.25zM2.504 9.585c0-.69.56-1.25 1.25-1.25H12a1.25 1.25 0 010 2.5H3.754c-.69 0-1.25-.56-1.25-1.25zM2.504 14.415c0-.69.56-1.25 1.25-1.25h16.492a1.25 1.25 0 010 2.5H3.754c-.69 0-1.25-.56-1.25-1.25zM2.504 19.247c0-.69.56-1.25 1.25-1.25h7.714a1.25 1.25 0 110 2.5H3.754c-.69 0-1.25-.56-1.25-1.25z", "fill": "currentColor"}, [])])
+export default IconTextAlignLeftSolid

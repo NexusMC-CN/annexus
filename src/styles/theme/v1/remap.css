@@ -1,0 +1,281 @@
+:root {
+  --charcoal-radius-oval: 999999px;
+  /* 互換レイヤー: focus幅の実値 */
+  --charcoal-border-width-m: 1px;
+  --charcoal-border-width-focus-2: 4px;
+  --charcoal-border-width-focus-1: 0px;
+  /* 互換レイヤー: typography aliasから参照するv1 textプリミティブ */
+  --charcoal-text-v1-line-height-40: 40px;
+  --charcoal-text-v1-line-height-28: 28px;
+  --charcoal-text-v1-line-height-24: 24px;
+  --charcoal-text-v1-line-height-22: 22px;
+  --charcoal-text-v1-line-height-20: 20px;
+  --charcoal-text-v1-font-weight-default: 400;
+  --charcoal-text-v1-font-weight-bold: 700;
+  --charcoal-text-v1-font-size-32: 32px;
+  --charcoal-text-v1-font-size-20: 20px;
+  --charcoal-text-v1-font-size-16: 16px;
+  --charcoal-text-v1-font-size-14: 14px;
+  --charcoal-text-v1-font-size-12: 12px;
+  --charcoal-text-v1-font-family-sans: Noto Sans CJK JP;
+  /* 互換レイヤー: v1相当の実値 */
+  --charcoal-text-line-height-heading-xxxl: 40px;
+  --charcoal-text-line-height-heading-xxl: 36px;
+  --charcoal-text-line-height-heading-xs: 24px;
+  --charcoal-text-line-height-heading-xl: 32px;
+  --charcoal-text-line-height-heading-s: 24px;
+  --charcoal-text-line-height-heading-m: 28px;
+  --charcoal-text-line-height-heading-l: 28px;
+  --charcoal-text-font-size-heading-xxxl: 32px;
+  --charcoal-text-font-size-heading-xxl: 28px;
+  --charcoal-text-font-size-heading-xs: 16px;
+  --charcoal-text-font-size-heading-xl: 25px;
+  --charcoal-text-font-size-heading-s: 18px;
+  --charcoal-text-font-size-heading-m: 20px;
+  --charcoal-text-font-size-heading-l: 22px;
+  --charcoal-text-font-size-caption-s-10: 10px;
+  /* 追加: 440/272/168/104など、値ベースの互換alias */
+  --charcoal-space-440: 440px;
+  --charcoal-space-272: 272px;
+  --charcoal-space-168: 168px;
+  --charcoal-space-104: 104px;
+  --charcoal-space-64: 64px;
+  /* 互換レイヤー: スペーシングの上書き */
+  --charcoal-space-46: 32px;
+  --charcoal-space-40: 24px;
+  --charcoal-space-30: 16px;
+  --charcoal-space-25: 12px;
+  --charcoal-space-24: 24px;
+  --charcoal-space-20: 8px;
+  --charcoal-space-16: 16px;
+  --charcoal-space-8: 8px;
+  --charcoal-space-4: 4px;
+  /* 互換レイヤー: colorプリミティブ。canonical な --charcoal-* に解決できない値のみ残置 */
+  --charcoal-color-container-tertiary-press-a: var(--charcoal-surface2-press);
+  --charcoal-color-container-tertiary-press: var(--charcoal-surface2-press);
+  --charcoal-color-container-tertiary-hover-a: var(--charcoal-surface2-hover);
+  --charcoal-color-container-tertiary-hover: var(--charcoal-surface2-hover);
+  --charcoal-color-container-tertiary-default-a: var(--charcoal-surface2);
+  --charcoal-color-container-tertiary-default: var(--charcoal-surface2);
+  --charcoal-color-border-focus-1: rgba(0, 150, 250, 0);
+  --charcoal-color-semantic-primary-default-a: rgba(0, 150, 250, 0.32);
+  --charcoal-color-semantic-assertive-default-a: rgba(255, 43, 0, 0.32);
+  /* 互換レイヤー: v1相当のtypography値に解決 */
+  --charcoal-text-line-height-paragraph: var(--charcoal-text-v1-line-height-22);
+  --charcoal-text-line-height-heading-xxxs: var(
+    --charcoal-text-v1-line-height-22
+  );
+  --charcoal-text-line-height-heading-xxs: var(
+    --charcoal-text-v1-line-height-24
+  );
+  --charcoal-text-line-height-caption-s-10: var(--charcoal-text-line-height-0);
+  --charcoal-text-line-height-caption-s: var(--charcoal-text-v1-line-height-20);
+  --charcoal-text-line-height-caption-m: var(--charcoal-text-v1-line-height-22);
+  --charcoal-text-line-height-body: var(--charcoal-text-v1-line-height-22);
+  --charcoal-text-font-weight-regular: var(
+    --charcoal-text-v1-font-weight-default
+  );
+  --charcoal-text-font-weight-bold: var(--charcoal-text-v1-font-weight-bold);
+  --charcoal-text-font-size-paragraph: var(--charcoal-text-v1-font-size-14);
+  --charcoal-text-font-size-heading-xxxs: var(--charcoal-text-v1-font-size-14);
+  --charcoal-text-font-size-heading-xxs: var(--charcoal-text-v1-font-size-16);
+  --charcoal-text-font-size-caption-s: var(--charcoal-text-v1-font-size-12);
+  --charcoal-text-font-size-caption-m: var(--charcoal-text-v1-font-size-14);
+  --charcoal-text-font-size-body: var(--charcoal-text-v1-font-size-14);
+  /* 互換レイヤー: text color alias を canonical な v1 token に解決 */
+  --charcoal-color-text-visited-press: var(--charcoal-link1-press);
+  --charcoal-color-text-visited-hover: var(--charcoal-link1-hover);
+  --charcoal-color-text-visited-default: var(--charcoal-link1);
+  --charcoal-color-text-tertiary-press: var(--charcoal-text3-press);
+  --charcoal-color-text-tertiary-hover: var(--charcoal-text3-hover);
+  --charcoal-color-text-tertiary-default: var(--charcoal-text3);
+  --charcoal-color-text-secondary-press: var(--charcoal-text2-press);
+  --charcoal-color-text-secondary-hover: var(--charcoal-text2-hover);
+  --charcoal-color-text-secondary-default: var(--charcoal-text2);
+  --charcoal-color-text-press-text1: var(--charcoal-text1-press);
+  --charcoal-color-text-press: var(--charcoal-text2-press);
+  --charcoal-color-text-positive-press: var(--charcoal-success-press);
+  --charcoal-color-text-positive-hover: var(--charcoal-success-hover);
+  --charcoal-color-text-positive-default: var(--charcoal-success);
+  --charcoal-color-text-placeholder-press: var(--charcoal-text3-press);
+  --charcoal-color-text-placeholder-hover: var(--charcoal-text3-hover);
+  --charcoal-color-text-placeholder-default: var(--charcoal-text3);
+  --charcoal-color-text-on-primary-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-primary-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-primary-default: var(--charcoal-text5);
+  --charcoal-color-text-on-positive-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-positive-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-positive-default: var(--charcoal-text5);
+  --charcoal-color-text-on-on-img-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-on-img-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-on-img-default: var(--charcoal-text5);
+  --charcoal-color-text-on-notice-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-notice-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-notice-default: var(--charcoal-text5);
+  --charcoal-color-text-on-negative-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-negative-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-negative-default: var(--charcoal-text5);
+  --charcoal-color-text-on-hud-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-hud-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-hud-default: var(--charcoal-text5);
+  --charcoal-color-text-on-discovery-press: var(--charcoal-text5-press);
+  --charcoal-color-text-on-discovery-hover: var(--charcoal-text5-hover);
+  --charcoal-color-text-on-discovery-default: var(--charcoal-text5);
+  --charcoal-color-text-notice-press: var(--charcoal-warning-press);
+  --charcoal-color-text-notice-hover: var(--charcoal-warning-hover);
+  --charcoal-color-text-notice-default: var(--charcoal-warning);
+  --charcoal-color-text-negative-press: var(--charcoal-assertive-press);
+  --charcoal-color-text-negative-hover: var(--charcoal-assertive-hover);
+  --charcoal-color-text-negative-default: var(--charcoal-assertive);
+  --charcoal-color-text-info-press: var(--charcoal-link1-press);
+  --charcoal-color-text-info-hover: var(--charcoal-link1-hover);
+  --charcoal-color-text-info-default: var(--charcoal-link1);
+  --charcoal-color-text-hover-text1: var(--charcoal-text1-hover);
+  --charcoal-color-text-hover: var(--charcoal-text2-hover);
+  --charcoal-color-text-disable: var(--charcoal-text2);
+  --charcoal-color-text-default-text1: var(--charcoal-text1);
+  --charcoal-color-text-default: var(--charcoal-text2);
+  --charcoal-color-icon-on-neutral-press: var(--charcoal-text5-press);
+  --charcoal-color-icon-on-neutral-hover: var(--charcoal-text5-hover);
+  --charcoal-color-icon-on-neutral-default: var(--charcoal-text5);
+  /* 互換レイヤー: icon alias を text color token 経由に差し替え */
+  --charcoal-color-icon-tertiary-press: var(--charcoal-text3-press);
+  --charcoal-color-icon-tertiary-hover: var(--charcoal-text3-hover);
+  --charcoal-color-icon-tertiary-default: var(--charcoal-text3);
+  --charcoal-color-icon-secondary-press: var(--charcoal-text2-press);
+  --charcoal-color-icon-secondary-hover: var(--charcoal-text2-hover);
+  --charcoal-color-icon-secondary-default: var(--charcoal-text2);
+  --charcoal-color-icon-press: var(--charcoal-color-text-press);
+  --charcoal-color-icon-positive-press: var(
+    --charcoal-color-text-positive-press
+  );
+  --charcoal-color-icon-positive-hover: var(
+    --charcoal-color-text-positive-hover
+  );
+  --charcoal-color-icon-positive-default: var(
+    --charcoal-color-text-positive-default
+  );
+  --charcoal-color-icon-on-primary-press: var(
+    --charcoal-color-text-on-primary-press
+  );
+  --charcoal-color-icon-on-primary-hover: var(
+    --charcoal-color-text-on-primary-hover
+  );
+  --charcoal-color-icon-on-primary-default: var(
+    --charcoal-color-text-on-primary-default
+  );
+  --charcoal-color-icon-on-positive-press: var(
+    --charcoal-color-text-on-positive-press
+  );
+  --charcoal-color-icon-on-positive-hover: var(
+    --charcoal-color-text-on-positive-hover
+  );
+  --charcoal-color-icon-on-positive-default: var(
+    --charcoal-color-text-on-positive-default
+  );
+  --charcoal-color-icon-on-on-img-press: var(
+    --charcoal-color-text-on-on-img-press
+  );
+  --charcoal-color-icon-on-on-img-hover: var(
+    --charcoal-color-text-on-on-img-hover
+  );
+  --charcoal-color-icon-on-on-img-default: var(
+    --charcoal-color-text-on-on-img-default
+  );
+  --charcoal-color-icon-on-notice-press: var(
+    --charcoal-color-text-on-notice-press
+  );
+  --charcoal-color-icon-on-notice-hover: var(
+    --charcoal-color-text-on-notice-hover
+  );
+  --charcoal-color-icon-on-notice-default: var(
+    --charcoal-color-text-on-notice-default
+  );
+  --charcoal-color-icon-on-negative-press: var(
+    --charcoal-color-text-on-negative-press
+  );
+  --charcoal-color-icon-on-negative-hover: var(
+    --charcoal-color-text-on-negative-hover
+  );
+  --charcoal-color-icon-on-negative-default: var(
+    --charcoal-color-text-on-negative-default
+  );
+  --charcoal-color-icon-notice-press: var(--charcoal-color-text-notice-press);
+  --charcoal-color-icon-notice-hover: var(--charcoal-color-text-notice-hover);
+  --charcoal-color-icon-notice-default: var(
+    --charcoal-color-text-notice-default
+  );
+  --charcoal-color-icon-negative-press: var(
+    --charcoal-color-text-negative-press
+  );
+  --charcoal-color-icon-negative-hover: var(
+    --charcoal-color-text-negative-hover
+  );
+  --charcoal-color-icon-negative-default: var(
+    --charcoal-color-text-negative-default
+  );
+  --charcoal-color-icon-hover: var(--charcoal-color-text-hover);
+  --charcoal-color-icon-disable: var(--charcoal-color-text-disable);
+  --charcoal-color-icon-default: var(--charcoal-color-text-default);
+  /* 互換レイヤー: container/border/background alias を surface/semantic の canonical token に解決 */
+  --charcoal-color-container-subtle: var(--charcoal-surface2);
+  --charcoal-color-container-skeleton: var(--charcoal-surface1);
+  --charcoal-color-container-secondary-press-a: var(--charcoal-surface3-press);
+  --charcoal-color-container-secondary-press: var(--charcoal-surface3-press);
+  --charcoal-color-container-secondary-hover-a: var(--charcoal-surface3-hover);
+  --charcoal-color-container-secondary-hover: var(--charcoal-surface3-hover);
+  --charcoal-color-container-secondary-default-a: var(--charcoal-surface3);
+  --charcoal-color-container-secondary-default: var(--charcoal-surface3);
+  --charcoal-color-container-primary-press: var(--charcoal-brand-press);
+  --charcoal-color-container-primary-hover: var(--charcoal-brand-hover);
+  --charcoal-color-container-primary-default: var(--charcoal-brand);
+  --charcoal-color-container-press-a: var(--charcoal-surface1-press);
+  --charcoal-color-container-press: var(--charcoal-surface1-press);
+  --charcoal-color-container-positive-press: var(--charcoal-success-press);
+  --charcoal-color-container-positive-hover: var(--charcoal-success-hover);
+  --charcoal-color-container-positive-default: var(--charcoal-success);
+  --charcoal-color-container-on-img-press: var(--charcoal-surface4-press);
+  --charcoal-color-container-on-img-hover: var(--charcoal-surface4-hover);
+  --charcoal-color-container-on-img-default: var(--charcoal-surface4);
+  --charcoal-color-container-notice-press: var(--charcoal-warning-press);
+  --charcoal-color-container-notice-hover: var(--charcoal-warning-hover);
+  --charcoal-color-container-notice-default: var(--charcoal-warning);
+  --charcoal-color-container-neutral-press: var(--charcoal-text3-press);
+  --charcoal-color-container-neutral-hover: var(--charcoal-text3-hover);
+  --charcoal-color-container-neutral-default: var(--charcoal-text3);
+  --charcoal-color-container-negative-press: var(--charcoal-assertive-press);
+  --charcoal-color-container-negative-hover: var(--charcoal-assertive-hover);
+  --charcoal-color-container-negative-default: var(--charcoal-assertive);
+  --charcoal-color-container-hud-press: var(--charcoal-surface6-press);
+  --charcoal-color-container-hud-hover: var(--charcoal-surface6-hover);
+  --charcoal-color-container-hud-default: var(--charcoal-surface6);
+  --charcoal-color-container-hover-a: var(--charcoal-surface1-hover);
+  --charcoal-color-container-hover: var(--charcoal-surface1-hover);
+  --charcoal-color-container-discovery-press: var(--charcoal-assertive-press);
+  --charcoal-color-container-discovery-hover: var(--charcoal-assertive-hover);
+  --charcoal-color-container-discovery-default: var(--charcoal-assertive);
+  --charcoal-color-container-disable: var(--charcoal-surface1);
+  --charcoal-color-container-default-a: var(--charcoal-surface1);
+  --charcoal-color-container-default: var(--charcoal-surface1);
+  /* 比較元にだけある--charcoal-color-border-{default,hover,press}-text3 aliasは、ここでは出力していません。 */
+  --charcoal-color-border-selected: var(--charcoal-brand);
+  --charcoal-color-border-secondary: var(--charcoal-border);
+  --charcoal-color-border-press: var(--charcoal-text3-press);
+  --charcoal-color-border-negative: var(
+    --charcoal-color-semantic-assertive-default-a
+  );
+  --charcoal-color-border-hover: var(--charcoal-text3-hover);
+  --charcoal-color-border-hud: var(--charcoal-color-background-default);
+  --charcoal-color-border-focus-legacy: var(
+    --charcoal-color-semantic-primary-default-a
+  );
+  --charcoal-color-border-focus-2: var(
+    --charcoal-color-semantic-primary-default-a
+  );
+  --charcoal-color-border-disable: var(--charcoal-border);
+  --charcoal-color-border-default: var(--charcoal-text3);
+  --charcoal-color-background-tertiary: var(--charcoal-surface3);
+  --charcoal-color-background-secondary: var(--charcoal-background2);
+  --charcoal-color-background-overlay: var(--charcoal-surface4);
+  --charcoal-color-background-default: var(--charcoal-background1);
+}

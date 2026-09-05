@@ -1,0 +1,4 @@
+import { h } from 'vue'
+import { createSvgIcon } from '../../../../internal/svg'
+export const IconContrast = createSvgIcon("IconContrast", {"width": "24", "height": "24", "viewBox": "0 0 24 24", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"}, () => [h("path", {"fill-rule": "evenodd", "clip-rule": "evenodd", "d": "M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-.86 1.543a8.5 8.5 0 110 16.914V3.543z", "fill": "currentColor"}, [])])
+export default IconContrast

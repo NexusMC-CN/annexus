@@ -1,0 +1,4 @@
+import { h } from 'vue'
+import { createSvgIcon } from '../../../internal/svg'
+export const IconAlart24 = createSvgIcon("IconAlart24", {"width": "24", "height": "24", "viewBox": "0 0 24 24", "fill": "none", "xmlns": "http://www.w3.org/2000/svg"}, () => [h("path", {"fill-rule": "evenodd", "clip-rule": "evenodd", "d": "M8 2a4 4 0 00-4 4v11h16V6a4 4 0 00-4-4H8zm0 2a2 2 0 00-2 2v1a1 1 0 002 0V6h2a1 1 0 100-2H8z", "fill": "currentColor"}, []), h("path", {"d": "M2 20a1 1 0 011-1h18a1 1 0 011 1v1a1 1 0 01-1 1H3a1 1 0 01-1-1v-1z", "fill": "currentColor"}, [])])
+export default IconAlart24
